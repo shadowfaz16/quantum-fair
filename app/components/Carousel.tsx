@@ -15,7 +15,7 @@ const Carousel = (props: Props) => {
 
 
   return (
-      <motion.div animate={{ x: `-${index * 100}%` }} className="flex">
+      <motion.div animate={{ x: `-${1 * 100}%` }} className="flex">
           {images.map((image, i) => (
               <img key={image} src={image} className="aspect-[3/2] object-cover" />
           ))}
