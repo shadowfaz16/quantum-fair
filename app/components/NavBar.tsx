@@ -8,7 +8,7 @@ type Props = {}
 const NavBar = (props: Props) => {
   return (
     // navbar with logo, menu, search bar, and button to get started.
-    <div className="flex w-full justify-between py-4 items-center px-10 border-b">
+    <div className="flex w-full justify-between py-4 items-center px-10 border-b sticky top-0 bg-white">
         <div className="logo">
             <Image src={logo} alt="logo" width={170} height={170} />
         </div>
@@ -17,11 +17,11 @@ const NavBar = (props: Props) => {
                   <input type="text" placeholder="Search for collections and accounts" className='bg-[#EAE3F8] text-[#A274FF] placeholder:text-[#A274FF] border border-[#5F27CB] rounded-full w-96 px-4 py-2 text-sm' />
             </div>
             <div className="menu">
-                <ul className='flex space-x-11 text-[#5F27CB] font-semibold'>
-                    <li>Explore</li>
-                    <li>Stats</li>
-                    <li>Bridge</li>
-                    <li>My raffles</li>
+                <ul className='flex space-x-11 text-[#5F27CB] font-semibold -ml-4'>
+                    <li className='hover:cursor-pointer'>Explore</li>
+                    <li className='hover:cursor-pointer'>Stats</li>
+                    <li className='hover:cursor-pointer'>Bridge</li>
+                    <li className='hover:cursor-pointer'>My raffles</li>
                 </ul>
             </div>
             <div className="button">
