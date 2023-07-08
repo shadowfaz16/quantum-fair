@@ -13,7 +13,7 @@ const RaffleListItem = (props: Props) => {
                 <img src='https://nftstorage.link/ipfs/bafkreigt6rsehas6dk4dswhz7polffxz5azmp6rdzaocbq3jkjvsnmvpzy' alt="logo" className='w-12 h-12' />
             </div>
             <div>
-                  <h1 className='font-bold text-2xl text-[#5F27CB]'>The Vitalik Raffle</h1>
+                  <h1 className='font-bold md:text-2xl text-[#5F27CB]'>The Vitalik Raffle</h1>
                   <span className='text-sm font-semibold text-[#EF68DC]'>Participants: 1452</span>
             </div>
         </div>
