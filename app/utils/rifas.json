@@ -1,0 +1,50 @@
+[
+{
+    "raffleName": "Fantastic Sweepstakes",
+    "raffleDescription": "Try your luck in our raffle and win fantastic prizes!",
+    "raffleImage": "https://nftstorage.link/ipfs/bafkreih4x4fxlslcsev7forqhclprwodoaxygoq2ou5qxthcamisedf53m",
+    "raffleBanner": "https://nftstorage.link/ipfs/bafkreigknp46csosanjw2azuez6v3zmwehcyc2jqc2tvhwiyt6s67qvrja",
+    "raffleCreator": "Alice Smith",
+    "raffleId": "raffle-3",
+    "raffleStartTime": "2023-10-01T00:00:00Z",
+    "raffleEndTime": "2023-10-31T00:00:00Z",
+    "raffleTicketPrice": "0.3",
+    "raffleTicketsRemaining": "75/100"
+  },
+  {
+    "raffleName": "Bunny #420",
+    "raffleDescription": "Join our amazing draw with tons of exciting prizes!",
+    "raffleImage": "https://nftstorage.link/ipfs/bafybeiasufzimqswwxdr7kniejnlh7x277ypi5awqkbsirveg6cg4vavwe",
+    "raffleBanner": "https://nftstorage.link/ipfs/bafkreiapzbcwfvbkkgzgbcsovlpzxp3fghvdfyfjfzwhsb6xqif5gh6vdy",
+    "raffleCreator": "Jane Doe",
+    "raffleId": "raffle-2",
+    "raffleStartTime": "2023-09-01T00:00:00Z",
+    "raffleEndTime": "2023-09-30T00:00:00Z",
+    "raffleTicketPrice": "0.2",
+    "raffleTicketsRemaining": "25/100"
+  },
+   {
+    "raffleName": "Motorheads #1043",
+    "raffleDescription": "This is a super lottery with a grand prize of $1 million.",
+    "raffleImage": "https://nftstorage.link/ipfs/bafkreihlbsqxwziha62hhz62zoxb4we6ieph344zve3wzccx7f56ywdsla",
+    "raffleBanner": "https://nftstorage.link/ipfs/bafkreicarghi7ajwzqipk5bd237uw2w6dbhjggfursalopccfvutouafgi",
+    "raffleCreator": "John Doe",
+    "raffleId": "raffle-1",
+    "raffleStartTime": "2023-08-01T00:00:00Z",
+    "raffleEndTime": "2023-08-31T00:00:00Z",
+    "raffleTicketPrice": "0.1",
+    "raffleTicketsRemaining": "50/100"
+  },
+  {
+    "raffleName": "Great Raffle",
+    "raffleDescription": "This raffle offers a chance to win the prize of a lifetime.",
+    "raffleImage": "https://nftstorage.link/ipfs/bafkreiafvrubkcq5242i5nqz5g6t7t2fzw7uztwz7zdvxvyafom4sysd5q",
+    "raffleBanner": "https://nftstorage.link/ipfs/bafkreigawnqq44rqotvbznjrguzlle3lyh3fmt2m5xscyug66juxpcyvgm",
+    "raffleCreator": "Bob Johnson",
+    "raffleId": "raffle-4",
+    "raffleStartTime": "2023-11-01T00:00:00Z",
+    "raffleEndTime": "2023-11-30T00:00:00Z",
+    "raffleTicketPrice": "0.4",
+    "raffleTicketsRemaining": "35/100"
+  }
+]

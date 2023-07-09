@@ -8,6 +8,7 @@ import HappyPathJoin from './components/HappyPathJoin'
 import { useContractRead } from 'wagmi'
 import abi from './utils/abi.json'
 import RaffleCard from './components/RaffleCard'
+import raffles from './utils/rifas.json'
 
 
 export default function Home() {
@@ -16,10 +17,9 @@ export default function Home() {
 
   return (
     <>
-      <main className="py-8 px-6 md:px-10">
+      <main className="py-6 md:py-10 px-6 md:px-10">
         <div className='flex justify-center'>
-          <img src='https://nftstorage.link/ipfs/bafybeigknjddz7izjx7bjrgtm267yxd4me4asrzawal2lp47coh2amnkwm' alt="logo" />
-          {/* {bafybeiecimoztswv7vt4xbspcpmkhq66ysjdyjnwbbeb2ryql7xaip2r5i } */}
+          <img src='https://nftstorage.link/ipfs/bafybeigb6slir75kg2kmib7ndtfaaba3rdkuqqtmdsup7tlhktmc2rt7uu' alt="logo" className='rounded-3xl w-full' />
         </div>
         <div className='space-y-2 py-10 md:py-16'>
           <h2 className="text-3xl md:text-5xl font-bold text-[#653AA3]">
@@ -30,11 +30,21 @@ export default function Home() {
           </h5>
         </div>
         <div className='grid md:grid-cols-3 gap-12'>
-          <div onClick={() => setModal(true)}>
-            <RaffleCard />
-          </div>
-          <RaffleCard />
-          <RaffleCard />
+          {raffles.map((raffle) => (
+            <RaffleCard
+              key={raffle.raffleId}
+              raffleName={raffle.raffleName}
+              raffleDescription={raffle.raffleDescription}
+              raffleImage={raffle.raffleImage}
+              raffleBanner={raffle.raffleBanner}
+              raffleCreator={raffle.raffleCreator}
+              raffleId={raffle.raffleId}
+              raffleStartTime={raffle.raffleStartTime}
+              raffleEndTime={raffle.raffleEndTime}
+              raffleTicketPrice={raffle.raffleTicketPrice}
+              raffleTicketsRemaining={raffle.raffleTicketsRemaining}
+            />
+          ))}
         </div>
         {/*  */}
         <div className='space-y-2 text-center py-10 md:py-16 mt-12'>

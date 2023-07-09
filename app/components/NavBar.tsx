@@ -22,7 +22,7 @@ const NavBar = (props: Props) => {
             <div className="search">
                   <input type="text" placeholder="Search for collections and accounts" className='bg-[#EAE3F8] text-[#A274FF] placeholder:text-[#A274FF] border border-[#5F27CB] rounded-full w-60 md:w-96 px-4 py-2 text-xs md:text-sm' />
             </div>
-            <div className="menu hidden">
+            <div className="menu hidden md:block">
                 <ul className='flex space-x-11 text-[#5F27CB] font-semibold -ml-4'>
                     <li className='hover:cursor-pointer'>Explore</li>
                     <li className='hover:cursor-pointer'>Stats</li>
