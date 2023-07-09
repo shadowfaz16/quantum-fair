@@ -1,6 +1,7 @@
 [
 {
     "raffleName": "Fantastic Sweepstakes",
+    "raffleContractAddress": "0x90e663C5B40eC850DB2bb35E33d72C97CC41bC61",
     "raffleDescription": "Try your luck in our raffle and win fantastic prizes!",
     "raffleImage": "https://nftstorage.link/ipfs/bafkreih4x4fxlslcsev7forqhclprwodoaxygoq2ou5qxthcamisedf53m",
     "raffleBanner": "https://nftstorage.link/ipfs/bafkreigknp46csosanjw2azuez6v3zmwehcyc2jqc2tvhwiyt6s67qvrja",
@@ -13,6 +14,7 @@
   },
   {
     "raffleName": "Bunny #420",
+    "raffleContractAddress": "0xbafB5eE8c474904Cc39E9D3DF5022c72344CaEcc",
     "raffleDescription": "Join our amazing draw with tons of exciting prizes!",
     "raffleImage": "https://nftstorage.link/ipfs/bafybeiasufzimqswwxdr7kniejnlh7x277ypi5awqkbsirveg6cg4vavwe",
     "raffleBanner": "https://nftstorage.link/ipfs/bafkreiapzbcwfvbkkgzgbcsovlpzxp3fghvdfyfjfzwhsb6xqif5gh6vdy",
@@ -25,6 +27,7 @@
   },
    {
     "raffleName": "Motorheads #1043",
+    "raffleContractAddress": "0xdD73eb7f7CfD0d07647934d3e0876aE386C1CC0D",
     "raffleDescription": "This is a super lottery with a grand prize of $1 million.",
     "raffleImage": "https://nftstorage.link/ipfs/bafkreihlbsqxwziha62hhz62zoxb4we6ieph344zve3wzccx7f56ywdsla",
     "raffleBanner": "https://nftstorage.link/ipfs/bafkreicarghi7ajwzqipk5bd237uw2w6dbhjggfursalopccfvutouafgi",
@@ -37,6 +40,7 @@
   },
   {
     "raffleName": "Great Raffle",
+    "raffleContractAddress": "0x4c026E4956120F5C22753C88eD046BE4876CddBc",
     "raffleDescription": "This raffle offers a chance to win the prize of a lifetime.",
     "raffleImage": "https://nftstorage.link/ipfs/bafkreiafvrubkcq5242i5nqz5g6t7t2fzw7uztwz7zdvxvyafom4sysd5q",
     "raffleBanner": "https://nftstorage.link/ipfs/bafkreigawnqq44rqotvbznjrguzlle3lyh3fmt2m5xscyug66juxpcyvgm",

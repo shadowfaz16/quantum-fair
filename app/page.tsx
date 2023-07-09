@@ -3,24 +3,65 @@ import Image from 'next/image'
 import NavBar from './components/NavBar'
 import Card from './components/Card'
 import RaffleListItem from './components/RaffleListItem'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import HappyPathJoin from './components/HappyPathJoin'
 import { useContractRead } from 'wagmi'
 import abi from './utils/abi.json'
 import RaffleCard from './components/RaffleCard'
 import raffles from './utils/rifas.json'
+import Link from 'next/link'
+import { motion, AnimatePresence } from 'framer-motion';
+import Carousel from './components/Carousel'
 
 
 export default function Home() {
 
   const [modal, setModal] = useState(false)
+  const [index, setIndex] = useState(0);
+
+  const images = [
+    'https://nftstorage.link/ipfs/bafybeigb6slir75kg2kmib7ndtfaaba3rdkuqqtmdsup7tlhktmc2rt7uu',
+    'https://nftstorage.link/ipfs/bafkreidfle57swao6y4z36pvfuqbinzzmpslztnfpkwlpbhlw5mc7b3goy',
+    'https://nftstorage.link/ipfs/bafkreieinb6l42kr5o4dkw54y4ozrgp34qxccsmskmzzxgt7vz3hu3iugq',
+  ];
+
+  // Animation variants
+  const variants = {
+    enter: (direction: number) => {
+      return {
+        opacity: 0,
+        x: direction > 0 ? 1000 : -1000,
+      };
+    },
+    center: {
+      opacity: 1,
+      x: 0,
+    },
+    exit: (direction: number) => {
+      return {
+        opacity: 0,
+        x: direction < 0 ? 1000 : -1000,
+      };
+    },
+  };
+
+  // Change the image index every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const direction = 1;
+
 
   return (
     <>
       <main className="py-6 md:py-10 px-6 md:px-10">
-        <div className='flex justify-center'>
-          <img src='https://nftstorage.link/ipfs/bafybeigb6slir75kg2kmib7ndtfaaba3rdkuqqtmdsup7tlhktmc2rt7uu' alt="logo" className='rounded-3xl w-full' />
-        </div>
+          <div className="flex justify-center">
+       <Carousel />
+      </div>
         <div className='space-y-2 py-10 md:py-16'>
           <h2 className="text-3xl md:text-5xl font-bold text-[#653AA3]">
             Featured projects
@@ -31,8 +72,8 @@ export default function Home() {
         </div>
         <div className='grid md:grid-cols-3 gap-12'>
           {raffles.map((raffle) => (
+            <Link href={`/raffles/${raffle.raffleContractAddress}`} key={raffle.raffleId}>
             <RaffleCard
-              key={raffle.raffleId}
               raffleName={raffle.raffleName}
               raffleDescription={raffle.raffleDescription}
               raffleImage={raffle.raffleImage}
@@ -44,6 +85,7 @@ export default function Home() {
               raffleTicketPrice={raffle.raffleTicketPrice}
               raffleTicketsRemaining={raffle.raffleTicketsRemaining}
             />
+            </Link>
           ))}
         </div>
         {/*  */}

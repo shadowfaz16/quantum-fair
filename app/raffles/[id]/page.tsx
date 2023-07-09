@@ -7,6 +7,7 @@ import optimism from "../../assets/optimism.svg"
 import abi from '../../utils/abi.json'
 import { FaCheckCircle, FaUser } from 'react-icons/fa'
 import { parseEther } from 'viem'
+import Carousel from '@/app/components/Carousel'
 
 type Props = {}
 
@@ -14,69 +15,69 @@ const RafflePage = () => {
   const { address, isConnecting, isDisconnected } = useAccount()
 
   const { data: raffleId } = useContractRead({
-    address: '0x993f8098a566798e69d460fd36b61745728d2a2d',
+    address: '0x90e663C5B40eC850DB2bb35E33d72C97CC41bC61',
     abi: abi,
     functionName: 'raffleId',
   })
 
   const { data: raffleOwner } = useContractRead({
-    address: '0x993f8098a566798e69d460fd36b61745728d2a2d',
+    address: '0x90e663C5B40eC850DB2bb35E33d72C97CC41bC61',
     abi: abi,
     functionName: 'owner',
   })
 
   const { data: creatorAddress } = useContractRead({
-    address: '0x993f8098a566798e69d460fd36b61745728d2a2d',
+    address: '0x90e663C5B40eC850DB2bb35E33d72C97CC41bC61',
     abi: abi,
     functionName: 'creatorAddress',
   })
 
   const { data: entries } = useContractRead({
-    address: '0x993f8098a566798e69d460fd36b61745728d2a2d',
+    address: '0x90e663C5B40eC850DB2bb35E33d72C97CC41bC61',
     abi: abi,
     functionName: 'entries',
-    args: ['0xfa670BB1Ff94A78aE34C700887DAa6d09c187203'],
+    args: [address],
   })
 
   const { data: participants } = useContractRead({
-    address: '0x993f8098a566798e69d460fd36b61745728d2a2d',
+    address: '0x90e663C5B40eC850DB2bb35E33d72C97CC41bC61',
     abi: abi,
     functionName: 'participants',
     args: ['1'],
   })
 
   const {data: startTime} = useContractRead({
-    address: '0x993f8098a566798e69d460fd36b61745728d2a2d',
+    address: '0x90e663C5B40eC850DB2bb35E33d72C97CC41bC61',
     abi: abi,
     functionName: 'startTime',
   })
 
   const { data: endTime } = useContractRead({
-    address: '0x993f8098a566798e69d460fd36b61745728d2a2d',
+    address: '0x90e663C5B40eC850DB2bb35E33d72C97CC41bC61',
     abi: abi,
     functionName: 'expectedEndTime',
   })
 
   const { data: ticketPrice } = useContractRead({
-    address: '0x993f8098a566798e69d460fd36b61745728d2a2d',
+    address: '0x90e663C5B40eC850DB2bb35E33d72C97CC41bC61',
     abi: abi,
     functionName: 'ticketPrice',
   })
 
   const { data: ticketsVaultAddress } = useContractRead({
-    address: '0x993f8098a566798e69d460fd36b61745728d2a2d',
+    address: '0x90e663C5B40eC850DB2bb35E33d72C97CC41bC61',
     abi: abi,
     functionName: 'ticketsVaultAddress',
   })
 
   const { data: ticketsVaultId } = useContractRead({
-    address: '0x993f8098a566798e69d460fd36b61745728d2a2d',
+    address: '0x90e663C5B40eC850DB2bb35E33d72C97CC41bC61',
     abi: abi,
     functionName: 'ticketsVaultId',
   })
 
   const { data: requiredBalance } = useContractRead({
-    address: '0x993f8098a566798e69d460fd36b61745728d2a2d',
+    address: '0x90e663C5B40eC850DB2bb35E33d72C97CC41bC61',
     abi: abi,
     functionName: 'requiredBalance',
   })
@@ -103,7 +104,7 @@ const RafflePage = () => {
   // WRITE FUNCTIONS
 
   const { config } = usePrepareContractWrite({
-    address: '0x32e55d8246CD3Fa02352325014A8ED9d91332869',
+    address: '0x90e663C5B40eC850DB2bb35E33d72C97CC41bC61',
     abi: abi,
     functionName: 'enter',
     args: [address, BigInt(3)],
@@ -118,8 +119,12 @@ const RafflePage = () => {
   )
 
   const shortenAddress = (address: string) => {
-    return `${address.slice(0, 6)}...${address.slice(-4)}`
-  }
+    if (address) {
+      return `${address.slice(0, 6)}...${address.slice(-4)}`;
+    }
+    return 'Address not available';
+  };
+
 
   const entrylist = entries?.toString();
   const raffleid = raffleId?.toString();
@@ -134,7 +139,7 @@ const RafflePage = () => {
             </div>
           </div>
           <div className='pt-10 max-w-full overflow-x-hidden'>
-            <img src="https://nftstorage.link/ipfs/bafkreiff3gn752bepqk7krm74o55ugjgbgysbi5wmxdl2tsogjf5xmlw44" className='object-cover' />
+          <Carousel />
             <div className='flex flex-col md:flex-row my-8'>
               <div className='flex flex-col space-y-2'>
                 <div className='flex items-center justify-center md:justify-start p-2 pr-6 rounded-full border space-x-4'>
@@ -168,7 +173,7 @@ const RafflePage = () => {
                     </div>
                   </div>
                   <div className='bg-[#9678EF] shadow-lg rounded-md text-white py-2 pr-16 pl-4'>
-                    <span className='font-bold'>Players</span>
+                    <span className='font-bold'>Your txs</span>
                     <div className='flex items-center space-x-2'>
                       <span className='font-bold text-xl'>{entrylist}</span>
                       <FaUser className='text-white' size={20} />

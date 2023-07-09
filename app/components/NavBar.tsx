@@ -11,7 +11,7 @@ const NavBar = (props: Props) => {
 
   return (
     // navbar with logo, menu, search bar, and button to get started.
-      <div className="flex w-full justify-between py-3 md:py-4 items-center px-6 border-b sticky top-0 bg-white md:px-10">
+      <div className="flex w-full justify-between py-3 md:py-4 items-center px-6 border-b sticky top-0 bg-white md:px-10 z-50">
         <Link href={"/"} className="logo hidden md:block">
             <Image src={logo} alt="logo" width={170} height={170} />
         </Link>
